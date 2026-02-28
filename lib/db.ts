@@ -2,7 +2,8 @@ import Database from "better-sqlite3";
 import path from "path";
 import fs from "fs";
 
-const DATA_DIR = path.join(process.cwd(), "data");
+// On Railway, mount a persistent volume at /data and set DATABASE_DIR=/data
+const DATA_DIR = process.env.DATABASE_DIR ?? path.join(process.cwd(), "data");
 const DB_PATH = path.join(DATA_DIR, "awards.db");
 
 // Ensure the data directory exists
