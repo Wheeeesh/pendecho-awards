@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background-color: #D04530;
+  min-height: 100vh;
+}
+
+/* ── POLY-8 range slider ─────────────────────────────────────────────── */
+.poly-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.poly-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.poly-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.poly-slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: none;
+  cursor: pointer;
+}
+
+.poly-slider:disabled {
+  opacity: 0.4;
+}
+
+/* ── Voted badge ─────────────────────────────────────────────────────── */
+.voted-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  color: #FFFFFF;
+  font-family: var(--font-barlow-condensed), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  user-select: none;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 8px; }
+::-webkit-scrollbar-track  { background: #B83D28; }
+::-webkit-scrollbar-thumb  { background: rgba(255,255,255,0.5); }
+::-webkit-scrollbar-thumb:hover { background: #FFFFFF; }
